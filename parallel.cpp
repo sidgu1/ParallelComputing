@@ -17,6 +17,19 @@ int main(){
         for(int i=0;i<n;i++){
         sum=sum+arr[i];//reduction occurs
     }
+    // SPMD code
+    // #pragma omp parallel
+    // {
+    //     int i,tempSum;
+    //     int nThrd =omp_get_num_threads();
+    //     int id=omp_get_thread_num();
+    //     for(i=id,tempSum=0;i<n;i+=nThrd){
+    //         tempSum+=arr[i];
+    //     }
+    //     #pragma omp critical
+    //     sum+=tempSum;
+    // }
+    
     e=clock();
     cout<<"\n"<<sum<<endl;
     cout<<e-s<<endl;
