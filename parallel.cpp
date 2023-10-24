@@ -4,7 +4,6 @@
 #include<time.h>
 clock_t s,e;
 using namespace std;
-
 int main(){
     int n=1e+5;
     // cin>>n;
